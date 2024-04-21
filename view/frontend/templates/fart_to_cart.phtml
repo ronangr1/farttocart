@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var \Ronangr1\FartToCart\Block\FartToCart $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Ronangr1_FartToCart/js/fart": {
+              "fart": "<?= $escaper->escapeUrl($block->getFartUrl()) ?>"
+            }
+        }
+    }
+</script>
