@@ -1,16 +1,24 @@
 <?php
 /**
+ * Copyright © Ronan Guérin All rights reserved.
+ * See COPYING.txt for license details.
+*/
+
+/**
  * @var \Ronangr1\FartToCart\Block\FartToCart $block
  * @var \Magento\Framework\Escaper $escaper
  */
 ?>
 
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "Ronangr1_FartToCart/js/fart": {
-              "fart": "<?= $escaper->escapeUrl($block->getFartUrl()) ?>"
-            }
+<script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toCartButton = document.getElementById('product-addtocart-button');
+        if (toCartButton) {
+            toCartButton.addEventListener('click', function() {
+                const fartUrl = '<?= $escaper->escapeUrl($block->getFartUrl()) ?>';
+                const fartAudio = new Audio(fartUrl);
+                fartAudio.play();
+            });
         }
-    }
+    });
 </script>

@@ -1,19 +1,30 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Ronan Guérin All rights reserved.
+ * See COPYING.txt for license details.
+*/
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <tab id="ronangr1" translate="label" sortOrder="100">
             <label>Ronangr1</label>
         </tab>
-        <section id="farttocart" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="farttocart" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Fart To Cart</label>
             <tab>ronangr1</tab>
             <resource>Ronangr1_FartToCart::config_farttocart</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="file" translate="label" type="Magento\Config\Block\System\Config\Form\Field\File" sortOrder="20" showInDefault="1" showInWebsite="1" >
+                    <label>File</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\File</backend_model>
+                    <upload_dir config="system" scope_info="1">file/fart</upload_dir>
                 </field>
             </group>
         </section>
