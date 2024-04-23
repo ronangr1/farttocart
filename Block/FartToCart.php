@@ -15,6 +15,7 @@ use Ronangr1\FartToCart\Model\Fart;
 class FartToCart extends Template
 {
     protected const FILE_PATH = 'file/fart/';
+
     /**
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
      * @param \Magento\Framework\View\Element\Template\Context $context
@@ -22,7 +23,8 @@ class FartToCart extends Template
      */
     public function __construct(
         protected readonly ScopeConfigInterface $scopeConfig,
-        Template\Context $context, array $data = []
+        Template\Context $context,
+        array $data = []
     ) {
         parent::__construct($context, $data);
     }
