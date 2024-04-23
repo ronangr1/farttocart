@@ -1,17 +1,18 @@
 {
-  "name": "ronangr1/module-fart-to-cart",
-  "version": "0.0.2",
-  "description": "This module allows you to add fart sounds when adding a product to the cart. ",
-  "type": "magento2-module",
-  "require": {
-    "magento/framework": "*"
-  },
-  "autoload": {
-    "files": [
-      "registration.php"
-    ],
-    "psr-4": {
-      "Ronangr1\\FartToCart\\": ""
+    "name": "ronangr1/module-fart-to-cart",
+    "version": "0.0.2",
+    "description": "This module allows you to add fart sounds when adding a product to the cart. ",
+    "type": "magento2-module",
+    "license": "MIT",
+    "require": {
+        "magento/framework": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ronangr1\\FartToCart\\": ""
+        }
     }
-  }
 }
